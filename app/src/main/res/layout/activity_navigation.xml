@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <view
+        android:id="@+id/information_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:background="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/turn_image"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@mipmap/turn_left"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <fragment
+        android:id="@+id/mapfragment"
+        class="com.here.android.mpa.mapping.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_weight="0.96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:id="@+id/information_bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/mapfragment"
+
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/distance_to_next_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:text="590 מ'"
+        android:layout_alignTop="@+id/turn_image"
+        android:layout_toRightOf="@+id/turn_image"
+        android:layout_toEndOf="@+id/turn_image" />
+
+    <TextView
+        android:id="@+id/road_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/turn_image"
+        android:layout_alignLeft="@+id/distance_to_next_turn"
+        android:layout_alignStart="@+id/distance_to_next_turn"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/naviCtrlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:text="Button"
+        android:layout_alignBottom="@+id/road_id"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
